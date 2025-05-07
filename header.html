@@ -1,0 +1,645 @@
+<!-- global css style -->
+
+<style>
+  :root{
+  --fixrr123-main-color: #8600ec;
+  --fixrr123-accent-color: #c8f000;
+  --fixrr123-hover-bg: #f3eef8;
+  } 
+</style>
+ <!-- end global css style -->
+
+<div class="ecom2025-header">
+  <div class="ecom2025-logo">
+    <span class="ecom2025-seek">Seek Glo</span>
+  </div>
+  <div class="ecom2025-nav" id="ecom2025MainNav">
+    <a href="#">Zuhause</a>
+    <a href="#">SeekGlo Micro-Infuser</a>
+    <a href="#">Micro-Patches</a>
+    <a href="#">Lichttherapie-Maske</a>
+    <a href="#">Kontakt</a>
+    <a href="#">uber uns</a>
+    <a href="#">Blogs</a>
+  </div>
+  <div class="ecom2025-header-icons">
+    <span class="ecom2025-header-icon" title="Suche">
+      <!-- Search SVG -->
+      <svg
+        width="22"
+        height="22"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <circle cx="10" cy="10" r="7" />
+        <line x1="15" y1="15" x2="20" y2="20" />
+      </svg>
+    </span>
+    <span class="ecom2025-header-icon" title="Warenkorb">
+      <!-- Bag SVG -->
+      <svg
+        width="22"
+        height="22"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M6 7V6a5 5 0 0 1 10 0v1" />
+        <rect x="3" y="7" width="16" height="12" rx="2" />
+      </svg>
+    </span>
+    <div
+      class="ecom2025-hamburger"
+      id="ecom2025HamburgerBtn"
+      aria-label="Menü öffnen"
+      tabindex="0"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="size-6"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+        />
+      </svg>
+    </div>
+  </div>
+</div>
+<style>
+  .ecom2025-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2vw;
+    height: 60px;
+    box-sizing: border-box;
+  }
+
+  .ecom2025-logo {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -2px;
+    display: flex;
+    align-items: center;
+  }
+  .ecom2025-logo .ecom2025-seek {
+    color: var(--fixrr123-accent-color);
+    font-weight: 400;
+  }
+
+  .ecom2025-nav {
+    display: flex;
+    gap: 2vw;
+    align-items: center;
+    flex: 1;
+    justify-content: center;
+  }
+  .ecom2025-nav a {
+    text-decoration: none;
+    color: var(--fixrr123-main-color);
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background 0.2s, color 0.2s;
+    padding: 6px 12px;
+    border-radius: 4px;
+  }
+  .ecom2025-nav a:hover {
+    background: var(--fixrr123-hover-bg);
+    color: var(--fixrr123-accent-color);
+  }
+
+  .ecom2025-header-icons {
+    display: flex;
+    align-items: center;
+    gap: 1.5vw;
+  }
+  .ecom2025-header-icon {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--fixrr123-main-color);
+    transition: color 0.2s;
+  }
+  .ecom2025-header-icon:hover {
+    color: var(--fixrr123-accent-color);
+  }
+
+  .ecom2025-hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    gap: 5px;
+  }
+  .ecom2025-hamburger span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background: var(--fixrr123-main-color);
+    border-radius: 2px;
+    transition: 0.3s;
+  }
+
+  @media (max-width: 900px) {
+    .ecom2025-nav {
+      gap: 1vw;
+    }
+  }
+
+  @media (max-width: 900px) {
+    .ecom2025-nav {
+      display: none;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      right: 0;
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+      z-index: 10;
+    }
+    .ecom2025-nav.ecom2025-open {
+      display: flex;
+      background-color: white;
+    }
+    .ecom2025-hamburger {
+      display: flex;
+    }
+  }
+</style>
+
+<script>
+  const ecom2025HamburgerBtn = document.getElementById("ecom2025HamburgerBtn");
+  const ecom2025MainNav = document.getElementById("ecom2025MainNav");
+  ecom2025HamburgerBtn.addEventListener("click", () => {
+    ecom2025MainNav.classList.toggle("ecom2025-open");
+  });
+  ecom2025MainNav.querySelectorAll("a").forEach((ecom2025Link) => {
+    ecom2025Link.addEventListener("click", () => {
+      if (window.innerWidth <= 700)
+        ecom2025MainNav.classList.remove("ecom2025-open");
+    });
+  });
+</script>
+
+<!-- header style 2 -->
+
+<div class="fixrr123-header">
+  <div class="fixrr123-logo">
+    <span class="fixrr123-title">Seek Glo</span>
+  </div>
+  <div class="fixrr123-nav" id="fixrr123MainNav">
+    <a href="#">Zuhause</a>
+    <a href="#">SeekGlo Micro-Infuser</a>
+    <a href="#">Micro-Patches</a>
+    <a href="#">Lichttherapie-Maske</a>
+    <a href="#">Kontakt</a>
+    <a href="#">uber uns</a>
+    <a href="#">Blogs</a>
+  </div>
+  <div class="fixrr123-header-icons">
+    <span class="fixrr123-header-icon" title="Suche">
+      <svg
+        width="22"
+        height="22"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <circle cx="10" cy="10" r="7" />
+        <line x1="15" y1="15" x2="20" y2="20" />
+      </svg>
+    </span>
+    <span class="fixrr123-header-icon" title="Warenkorb">
+      <svg
+        width="22"
+        height="22"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M6 7V6a5 5 0 0 1 10 0v1" />
+        <rect x="3" y="7" width="16" height="12" rx="2" />
+      </svg>
+    </span>
+    <div class="fixrr123-hamburger" id="fixrr123HamburgerBtn" tabindex="0">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="size-6"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+        />
+      </svg>
+    </div>
+  </div>
+</div>
+<style>
+  .fixrr123-header {
+    /* --fixrr123-main-color: #6f4c7b;
+    --fixrr123-accent-color: #bca5d3;
+    --fixrr123-hover-bg: #f3eef8; */
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    padding: 0 2vw;
+    height: auto;
+    box-sizing: border-box;
+    background: #fff;
+  }
+
+  .fixrr123-logo {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 0;
+  }
+  .fixrr123-logo .fixrr123-title {
+    color: var(--fixrr123-accent-color);
+    font-weight: 400;
+  }
+
+  .fixrr123-nav {
+    display: flex;
+    gap: 2vw;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto 0 auto;
+    padding-bottom: 0;
+    padding-top: 0;
+    order: 2;
+  }
+  .fixrr123-nav a {
+    text-decoration: none;
+    color: var(--fixrr123-main-color);
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background 0.2s, color 0.2s;
+    padding: 6px 12px;
+    border-radius: 4px;
+  }
+  .fixrr123-nav a:hover {
+    background: var(--fixrr123-hover-bg);
+    color: var(--fixrr123-accent-color);
+  }
+  .fixrr123-nav a:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--fixrr123-accent-color);
+  }
+  .fixrr123-nav a:active {
+    background: var(--fixrr123-hover-bg);
+    color: var(--fixrr123-accent-color);
+  }
+  .fixrr123-header-icons {
+    display: flex;
+    align-items: center;
+    gap: 1.5vw;
+    position: absolute;
+    right: 2vw;
+    top: 18px;
+  }
+  .fixrr123-header-icon {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--fixrr123-main-color);
+    transition: color 0.2s;
+  }
+  .fixrr123-header-icon:hover {
+    color: var(--fixrr123-accent-color);
+  }
+
+  .fixrr123-hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    gap: 5px;
+  }
+  .fixrr123-hamburger span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background: var(--fixrr123-main-color);
+    border-radius: 2px;
+    transition: 0.3s;
+  }
+  @media (max-width: 768px) {
+    .fixrr123-logo {
+      justify-content: start;
+    }
+  }
+  @media (max-width: 900px) {
+    .fixrr123-nav {
+      gap: 1vw;
+    }
+  }
+
+  @media (max-width: 900px) {
+    .fixrr123-header {
+      padding: 0;
+    }
+    .fixrr123-logo {
+      margin-top: 10px;
+      margin-bottom: 0;
+    }
+    .fixrr123-nav {
+      display: none;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      right: 0;
+      background: #fff;
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+      z-index: 10;
+    }
+    .fixrr123-nav.fixrr123-open {
+      display: flex;
+    }
+    .fixrr123-hamburger {
+      display: flex;
+    }
+    .fixrr123-header-icons {
+      top: 25px;
+    }
+  }
+</style>
+
+<script>
+  const fixrr123HamburgerBtn = document.getElementById("fixrr123HamburgerBtn");
+  const fixrr123MainNav = document.getElementById("fixrr123MainNav");
+  fixrr123HamburgerBtn.addEventListener("click", () => {
+    fixrr123MainNav.classList.toggle("fixrr123-open");
+  });
+  fixrr123MainNav.querySelectorAll("a").forEach((fixrr123Link) => {
+    fixrr123Link.addEventListener("click", () => {
+      if (window.innerWidth <= 700)
+        fixrr123MainNav.classList.remove("fixrr123-open");
+    });
+  });
+</script>
+
+<!-- header style 3 -->
+<div class="fixr123_str3-header">
+  <div class="fixr123_str3-logo">
+    <span class="fixr123_str3-title">Seek Glo</span>
+  </div>
+  <div class="fixr123_str3-nav" id="fixr123_str3MainNav">
+    <a href="#">Zuhause</a>
+    <a href="#">SeekGlo Micro-Infuser</a>
+    <a href="#">Micro-Patches</a>
+    <a href="#">Lichttherapie-Maske</a>
+    <a href="#">Kontakt</a>
+    <a href="#">uber uns</a>
+    <a href="#">Blogs</a>
+  </div>
+  <div class="fixr123_str3-header-icons">
+    <span class="fixr123_str3-header-icon" title="Suche">
+      <svg
+        width="22"
+        height="22"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <circle cx="10" cy="10" r="7" />
+        <line x1="15" y1="15" x2="20" y2="20" />
+      </svg>
+    </span>
+    <span class="fixr123_str3-header-icon" title="Warenkorb">
+      <svg
+        width="22"
+        height="22"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M6 7V6a5 5 0 0 1 10 0v1" />
+        <rect x="3" y="7" width="16" height="12" rx="2" />
+      </svg>
+    </span>
+    <div
+      class="fixr123_str3-hamburger"
+      id="fixr123_str3HamburgerBtn"
+      tabindex="0"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="size-6"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+        />
+      </svg>
+    </div>
+  </div>
+</div>
+<style>
+  .fixr123_str3-header {
+    
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    padding: 0 2vw;
+    height: auto;
+    box-sizing: border-box;
+  }
+
+  .fixr123_str3-logo {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -2px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 0;
+  }
+  .fixr123_str3-logo .fixr123_str3-title {
+    color: var(--fixrr123-accent-color);
+    font-weight: 400;
+  }
+
+  .fixr123_str3-nav {
+    display: flex;
+    gap: 2vw;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto 0 auto;
+    padding-bottom: 0;
+    padding-top: 0;
+    order: 2;
+  }
+  .fixr123_str3-nav a {
+    text-decoration: none;
+    color: var(--fixrr123-main-color);
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background 0.2s, color 0.2s;
+    padding: 6px 12px;
+    border-radius: 4px;
+  }
+  .fixr123_str3-nav a:hover {
+    background: var(--fixrr123-hover-bg);
+    color: var(--fixrr123-accent-color);
+  }
+  .fixr123_str3-nav a:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--fixrr123-accent-color);
+  }
+  .fixr123_str3-nav a:active {
+    background: var(--fixrr123-hover-bg);
+    color: var(--fixrr123-accent-color);
+  }
+  .fixr123_str3-header-icons {
+    display: flex;
+    align-items: center;
+    gap: 1.5vw;
+    position: absolute;
+    right: 2vw;
+    top: 18px;
+  }
+  .fixr123_str3-header-icon {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--fixrr123-main-color);
+    transition: color 0.2s;
+  }
+  .fixr123_str3-header-icon:hover {
+    color: var(--fixrr123-accent-color);
+  }
+
+  .fixr123_str3-hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    gap: 5px;
+  }
+  .fixr123_str3-hamburger span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background: var(--fixrr123-main-color);
+    border-radius: 2px;
+    transition: 0.3s;
+  }
+
+  @media (max-width: 900px) {
+    .fixr123_str3-nav {
+      gap: 1vw;
+    }
+  }
+
+  @media (max-width: 900px) {
+    .fixr123_str3-header {
+      padding: 0;
+    }
+    .fixr123_str3-logo {
+      margin-top: 10px;
+      margin-bottom: 0;
+    }
+    .fixr123_str3-nav {
+      display: none;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      right: 0;
+      background: #fff;
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+      z-index: 10;
+    }
+    .fixr123_str3-nav.fixr123_str3-open {
+      display: flex;
+    }
+    .fixr123_str3-hamburger {
+      display: flex;
+    }
+    .fixr123_str3-header-icons {
+      top: 25px;
+    }
+  }
+</style>
+
+<script>
+  const fixr123_str3HamburgerBtn = document.getElementById(
+    "fixr123_str3HamburgerBtn"
+  );
+  const fixr123_str3MainNav = document.getElementById("fixr123_str3MainNav");
+  fixr123_str3HamburgerBtn.addEventListener("click", () => {
+    fixr123_str3MainNav.classList.toggle("fixr123_str3-open");
+  });
+  fixr123_str3MainNav.querySelectorAll("a").forEach((fixr123_str3Link) => {
+    fixr123_str3Link.addEventListener("click", () => {
+      if (window.innerWidth <= 700)
+        fixr123_str3MainNav.classList.remove("fixr123_str3-open");
+    });
+  });
+</script>
