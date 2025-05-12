@@ -1,0 +1,202 @@
+<style>
+:root {
+  --fixr1252025r-bg: #f6fcfb;
+  --fixr1252025r-card-bg: #b6e6ff;
+  --fixr1252025r-card-radius: 18px;
+  --fixr1252025r-card-shadow: 0 2px 16px rgba(0,0,0,0.07);
+  --fixr1252025r-gap: 2.5rem;
+  --fixr1252025r-title: #222;
+  --fixr1252025r-price: #e53935;
+  --fixr1252025r-sub: #888;
+  --fixr1252025r-check: #2ecc40;
+  --fixr1252025r-cross: #e53935;
+  --fixr1252025r-btn-bg: #fff;
+  --fixr1252025r-btn-border: #1293e9;
+  --fixr1252025r-btn-color: #222;
+  --fixr1252025r-btn-radius: 8px;
+  --fixr1252025r-btn-shadow: 0 2px 8px rgba(18,147,233,0.08);
+  --fixr1252025r-card-width: 340px;
+  --fixr1252025r-img-ratio: 1.2/1;
+  --fixr1252025r-gap-mobile: 1.2rem;
+}
+.fixr1252025r-comparison-section {
+  background: var(--fixr1252025r-bg);
+  padding: 2.5rem 0 3.5rem 0;
+  width: 100%;
+}
+.fixr1252025r-comparison-cards {
+  display: flex;
+  flex-direction: row;
+  gap: var(--fixr1252025r-gap);
+  justify-content: center;
+  align-items: flex-start;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+.fixr1252025r-comparison-card {
+  background: var(--fixr1252025r-card-bg);
+  border-radius: var(--fixr1252025r-card-radius);
+  box-shadow: var(--fixr1252025r-card-shadow);
+  width: var(--fixr1252025r-card-width);
+  max-width: 95vw;
+  padding: 1.2rem 1.2rem 1.5rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.fixr1252025r-comparison-img {
+  width: 100%;
+  aspect-ratio: var(--fixr1252025r-img-ratio);
+  border-radius: 12px;
+  object-fit: cover;
+  margin-bottom: 1.1rem;
+}
+.fixr1252025r-comparison-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--fixr1252025r-title);
+  margin-bottom: 0.2rem;
+  text-align: center;
+}
+.fixr1252025r-comparison-price {
+  color: var(--fixr1252025r-price);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.2rem;
+  text-align: center;
+}
+.fixr1252025r-comparison-sub {
+  color: var(--fixr1252025r-sub);
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.fixr1252025r-comparison-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+.fixr1252025r-comparison-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.7em;
+  font-size: 1rem;
+  margin-bottom: 0.3em;
+  padding: 0.3em 0;
+  border-bottom: 1px solid #d6f0fa;
+}
+.fixr1252025r-comparison-list li:last-child {
+  border-bottom: none;
+}
+.fixr1252025r-comparison-list .fixr1252025r-check {
+  color: var(--fixr1252025r-check);
+  font-size: 1.2em;
+}
+.fixr1252025r-comparison-list .fixr1252025r-cross {
+  color: var(--fixr1252025r-cross);
+  font-size: 1.2em;
+}
+.fixr1252025r-comparison-list .fixr1252025r-bold {
+  font-weight: 700;
+}
+.fixr1252025r-comparison-vs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.1rem;
+  background: #000;
+  color: #fff;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  margin: 0 0.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  position: relative;
+  top: 30px;
+  z-index: 2;
+}
+.fixr1252025r-comparison-btn-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+.fixr1252025r-comparison-btn {
+  background: var(--fixr1252025r-btn-bg);
+  color: var(--fixr1252025r-btn-color);
+  border: 2px solid var(--fixr1252025r-btn-border);
+  border-radius: var(--fixr1252025r-btn-radius);
+  font-weight: 700;
+  font-size: 1.1rem;
+  padding: 0.9em 2.2em;
+  cursor: pointer;
+  box-shadow: var(--fixr1252025r-btn-shadow);
+  transition: background 0.2s, color 0.2s;
+}
+.fixr1252025r-comparison-btn:hover {
+  background: var(--fixr1252025r-btn-border);
+  color: #fff;
+}
+@media (max-width: 900px) {
+  .fixr1252025r-comparison-cards {
+    gap: var(--fixr1252025r-gap-mobile);
+  }
+  .fixr1252025r-comparison-card {
+    width: 95vw;
+    max-width: 400px;
+  }
+  .fixr1252025r-comparison-vs {
+    top: 0;
+    margin: 1.2rem 0;
+    position: static;
+  }
+}
+@media (max-width: 700px) {
+  .fixr1252025r-comparison-cards {
+    flex-direction: column;
+    align-items: center;
+    gap: var(--fixr1252025r-gap-mobile);
+  }
+  .fixr1252025r-comparison-vs {
+    margin: 1.2rem 0;
+    position: static;
+  }
+}
+</style>
+
+<div class="fixr1252025r-comparison-section">
+  <div class="fixr1252025r-comparison-cards">
+    <div class="fixr1252025r-comparison-card">
+      <img src="https://cdn.shopify.com/s/files/1/0747/1798/7033/files/compare-1_274fb7f7-5fac-4ee0-81f.png?v=1745309047" class="fixr1252025r-comparison-img" alt="Hydrozen Q-Rejuvalight Mask">
+      <div class="fixr1252025r-comparison-title">Hydrozen Q-Rejuvalight Mask</div>
+      <div class="fixr1252025r-comparison-price">€379</div>
+      <div class="fixr1252025r-comparison-sub">One-time investment</div>
+      <ul class="fixr1252025r-comparison-list">
+        <li><span class="fixr1252025r-check">✔</span> Saves you time</li>
+        <li><span class="fixr1252025r-check">✔</span> Comfort and privacy in your own home</li>
+        <li><span class="fixr1252025r-check">✔</span> <span class="fixr1252025r-bold">Unlimited treatments</span></li>
+        <li><span class="fixr1252025r-check">✔</span> <span class="fixr1252025r-bold">Only 3 minutes a day</span></li>
+        <li><span class="fixr1252025r-check">✔</span> No ongoing payments</li>
+      </ul>
+    </div>
+    <div class="fixr1252025r-comparison-vs">VS</div>
+    <div class="fixr1252025r-comparison-card">
+      <img src="https://cdn.shopify.com/s/files/1/0747/1798/7033/files/compare-1_274fb7f7-5fac-4ee0-81f.png?v=1745309047" class="fixr1252025r-comparison-img" alt="Others Mask">
+      <div class="fixr1252025r-comparison-title">Others Mask</div>
+      <div class="fixr1252025r-comparison-price">€300 - €900</div>
+      <div class="fixr1252025r-comparison-sub">Cost for 6 sessions</div>
+      <ul class="fixr1252025r-comparison-list">
+        <li><span class="fixr1252025r-cross">✖</span> <span class="fixr1252025r-bold">Time-consuming</span> journey to the clinic</li>
+        <li><span class="fixr1252025r-cross">✖</span> When (if) you get an appointment</li>
+        <li><span class="fixr1252025r-cross">✖</span> <span class="fixr1252025r-bold">Limited treatments</span></li>
+        <li><span class="fixr1252025r-cross">✖</span> Requires <span class="fixr1252025r-bold">regular visits</span></li>
+        <li><span class="fixr1252025r-cross">✖</span> Ongoing payments required</li>
+      </ul>
+    </div>
+  </div>
+  <div class="fixr1252025r-comparison-btn-wrap">
+    <button class="fixr1252025r-comparison-btn">SHOP WITH CONFIDENCE</button>
+  </div>
+</div>

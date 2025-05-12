@@ -1,0 +1,164 @@
+<style>
+:root {
+  --fixr1252025r-card-bg: #fff;
+  --fixr1252025r-card-radius: 18px;
+  --fixr1252025r-card-shadow: 0 2px 16px rgba(0,0,0,0.07);
+  --fixr1252025r-card-width: 240px;
+  --fixr1252025r-card-gap: 2rem;
+  --fixr1252025r-card-gap-mobile: 1rem;
+  --fixr1252025r-title: #222;
+  --fixr1252025r-price: #e53935;
+  --fixr1252025r-old-price: #b0b0b0;
+  --fixr1252025r-desc: #444b5d;
+  --fixr1252025r-badge-bg: #e53935;
+  --fixr1252025r-badge-color: #fff;
+  --fixr1252025r-badge-display: block;
+  --fixr1252025r-hover-scale: 1.04;
+  --fixr1252025r-hover-shadow: 0 6px 24px rgba(18,147,233,0.13);
+}
+.fixr1252025r-products-section {
+  background: #f6fcfb;
+  padding: 2.5rem 0 3.5rem 0;
+  width: 100%;
+}
+.fixr1252025r-products-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--fixr1252025r-card-gap);
+  justify-content: center;
+}
+.fixr1252025r-product-card {
+  background: var(--fixr1252025r-card-bg);
+  border-radius: var(--fixr1252025r-card-radius);
+  box-shadow: var(--fixr1252025r-card-shadow);
+  width: var(--fixr1252025r-card-width);
+  max-width: 95vw;
+  padding: 0 1.2rem 1.5rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.fixr1252025r-product-card:hover {
+  box-shadow: var(--fixr1252025r-hover-shadow);
+  transform: scale(var(--fixr1252025r-hover-scale));
+}
+.fixr1252025r-product-img {
+  width: 100%;
+  aspect-ratio: 1/1.1;
+  border-radius: 14px 14px 0 0;
+  object-fit: cover;
+  margin-bottom: 1.1rem;
+  margin-top: 1.1rem;
+}
+.fixr1252025r-product-badge {
+  display: var(--fixr1252025r-badge-display);
+  position: absolute;
+  top: 1.1rem;
+  left: 1.1rem;
+  background: var(--fixr1252025r-badge-bg);
+  color: var(--fixr1252025r-badge-color);
+  font-size: 0.95rem;
+  font-weight: 700;
+  border-radius: 8px;
+  padding: 0.3em 1em;
+  z-index: 2;
+  letter-spacing: 0.02em;
+}
+.fixr1252025r-product-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--fixr1252025r-title);
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+.fixr1252025r-product-desc {
+  color: var(--fixr1252025r-desc);
+  font-size: 0.98rem;
+  text-align: center;
+  margin-bottom: 0.7rem;
+}
+.fixr1252025r-product-prices {
+  display: flex;
+  align-items: center;
+  gap: 0.7em;
+  margin-bottom: 0.5rem;
+  justify-content: center;
+}
+.fixr1252025r-product-price {
+  color: var(--fixr1252025r-price);
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.fixr1252025r-product-old-price {
+  color: var(--fixr1252025r-old-price);
+  text-decoration: line-through;
+  font-size: 1rem;
+}
+@media (max-width: 900px) {
+  .fixr1252025r-products-grid {
+    gap: var(--fixr1252025r-card-gap-mobile);
+  }
+  .fixr1252025r-product-card {
+    width: 35vw;
+    min-width: 180px;
+    max-width: 98vw;
+  }
+}
+@media (max-width: 600px) {
+  .fixr1252025r-products-grid {
+    flex-direction: row;
+    align-items: center;
+    gap: var(--fixr1252025r-card-gap-mobile);
+  }
+  .fixr1252025r-product-card {
+    width: 28vw;
+  }
+}
+</style>
+
+<div class="fixr1252025r-products-section">
+  <div class="fixr1252025r-products-grid">
+    <div class="fixr1252025r-product-card">
+      <span class="fixr1252025r-product-badge">-30%</span>
+      <img src="https://picsum.photos/300?1" class="fixr1252025r-product-img" alt="Product 1">
+      <div class="fixr1252025r-product-title">HydroZen Beauty Patches+</div>
+      <div class="fixr1252025r-product-desc">Next-generation skincare through micro-infusion.</div>
+      <div class="fixr1252025r-product-prices">
+        <span class="fixr1252025r-product-price">$129.26</span>
+        <span class="fixr1252025r-product-old-price">$208.40</span>
+      </div>
+    </div>
+    <div class="fixr1252025r-product-card" style="--fixr1252025r-badge-display:none;">
+      <span class="fixr1252025r-product-badge">-20%</span>
+      <img src="https://picsum.photos/300?2" class="fixr1252025r-product-img" alt="Product 2">
+      <div class="fixr1252025r-product-title">All-in-one Serum</div>
+      <div class="fixr1252025r-product-desc">A powerful serum for daily skin renewal.</div>
+      <div class="fixr1252025r-product-prices">
+        <span class="fixr1252025r-product-price">$84.00</span>
+        <span class="fixr1252025r-product-old-price">$105.00</span>
+      </div>
+    </div>
+    <div class="fixr1252025r-product-card">
+      <span class="fixr1252025r-product-badge">-15%</span>
+      <img src="https://picsum.photos/300?3" class="fixr1252025r-product-img" alt="Product 3">
+      <div class="fixr1252025r-product-title">HydroZen Infuse+</div>
+      <div class="fixr1252025r-product-desc">Infuse your skin with deep hydration and nutrients.</div>
+      <div class="fixr1252025r-product-prices">
+        <span class="fixr1252025r-product-price">$119.00</span>
+        <span class="fixr1252025r-product-old-price">$140.00</span>
+      </div>
+    </div>
+    <div class="fixr1252025r-product-card">
+      <span class="fixr1252025r-product-badge">-10%</span>
+      <img src="https://picsum.photos/300?4" class="fixr1252025r-product-img" alt="Product 4">
+      <div class="fixr1252025r-product-title">Glow Cleanser</div>
+      <div class="fixr1252025r-product-desc">Gentle cleanser for a radiant, fresh look.</div>
+      <div class="fixr1252025r-product-prices">
+        <span class="fixr1252025r-product-price">$39.00</span>
+        <span class="fixr1252025r-product-old-price">$44.00</span>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,443 @@
+
+  <style>
+    :root {
+      --fixr1252025r-bg: #f6fcfb;
+      --fixr1252025r-white: #fff;
+      --fixr1252025r-primary: #1293e9;
+      --fixr1252025r-accent: #e6f6fd;
+      --fixr1252025r-text: #222;
+      --fixr1252025r-muted: #6b7280;
+      --fixr1252025r-border: #e5e7eb;
+      --fixr1252025r-radius: 18px;
+      --fixr1252025r-shadow: 0 2px 16px rgba(0,0,0,0.07);
+      --fixr1252025r-spacing: 1.5rem;
+      --fixr1252025r-price-old: #b0b0b0;
+      --fixr1252025r-success: #48bb78;
+      --fixr1252025r-warning: #f59e42;
+      --fixr1252025r-blue: #1293e9;
+      --fixr1252025r-btn: #1a9cf7;
+      --fixr1252025r-btn-hover: #0d7dc2;
+      --fixr1252025r-bundle-bg: #e6f6fd;
+      --fixr1252025r-bundle-active: #b6e6ff;
+      --fixr1252025r-bundle-border: #1293e9;
+      --fixr1252025r-container-flex-direction: row;
+    }
+    .fixr1252025r-main {
+      background: var(--fixr1252025r-bg);
+      min-height: 100vh;
+      padding: 0;
+    }
+    .fixr1252025r-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: var(--fixr1252025r-spacing);
+      display: flex;
+      gap: var(--fixr1252025r-spacing);
+      flex-direction: var(--fixr1252025r-container-flex-direction);
+    }
+    .fixr1252025r-left {
+      flex: 1.1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.2rem;
+    }
+    .fixr1252025r-main-img {
+      width: 100%;
+      max-width: 420px;
+      border-radius: var(--fixr1252025r-radius);
+      box-shadow: var(--fixr1252025r-shadow);
+      background: var(--fixr1252025r-white);
+      object-fit: contain;
+      aspect-ratio: 1/1.1;
+    }
+    .fixr1252025r-thumbs {
+      display: flex;
+      gap: 0.7rem;
+      margin-top: 1rem;
+      justify-content: center;
+    }
+    .fixr1252025r-thumb {
+      width: 70px;
+      height: 70px;
+      border-radius: 10px;
+      background: var(--fixr1252025r-white);
+      box-shadow: var(--fixr1252025r-shadow);
+      object-fit: contain;
+      border: 2px solid transparent;
+      cursor: pointer;
+      transition: border 0.2s;
+    }
+    .fixr1252025r-thumb.fixr1252025r-active {
+      border: 2px solid var(--fixr1252025r-primary);
+    }
+    .fixr1252025r-right {
+      flex: 1.2;
+      background: var(--fixr1252025r-white);
+      border-radius: var(--fixr1252025r-radius);
+      box-shadow: var(--fixr1252025r-shadow);
+      padding: 2.2rem 2rem 2rem 2.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+      min-width: 320px;
+    }
+    .fixr1252025r-rating {
+      color: var(--fixr1252025r-warning);
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 0.2rem;
+    }
+    .fixr1252025r-title {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--fixr1252025r-text);
+      margin-bottom: 0.5rem;
+    }
+    .fixr1252025r-desc {
+      color: var(--fixr1252025r-muted);
+      font-size: 1.1rem;
+      margin-bottom: 0.7rem;
+    }
+    .fixr1252025r-price-row {
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+    .fixr1252025r-price-old {
+      color: var(--fixr1252025r-price-old);
+      text-decoration: line-through;
+      font-size: 1.1rem;
+    }
+    .fixr1252025r-price-new {
+      color: var(--fixr1252025r-blue);
+      font-size: 2rem;
+      font-weight: 700;
+    }
+    .fixr1252025r-price-save {
+      background: var(--fixr1252025r-bundle-active);
+      color: var(--fixr1252025r-blue);
+      font-size: 1rem;
+      font-weight: 600;
+      border-radius: 8px;
+      padding: 0.2em 0.7em;
+      margin-left: 0.5em;
+    }
+    .fixr1252025r-quote {
+      font-style: italic;
+      color: var(--fixr1252025r-muted);
+      font-size: 1rem;
+      margin-bottom: 0.7rem;
+    }
+    .fixr1252025r-features {
+      margin: 0.7rem 0 0.7rem 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .fixr1252025r-features li {
+      display: flex;
+      align-items: center;
+      gap: 0.6em;
+      color: var(--fixr1252025r-text);
+      font-size: 1rem;
+    }
+    .fixr1252025r-features li::before {
+      content: '✔';
+      color: var(--fixr1252025r-success);
+      font-size: 1.1em;
+    }
+    .fixr1252025r-delivery {
+      color: var(--fixr1252025r-muted);
+      font-size: 0.98rem;
+      margin-bottom: 0.7rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5em;
+    }
+    .fixr1252025r-bundles {
+      display: flex;
+      flex-direction: column;
+      gap: 0.7rem;
+      margin-bottom: 1.2rem;
+    }
+    .fixr1252025r-bundle {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: var(--fixr1252025r-bundle-bg);
+      border-radius: 12px;
+      padding: 1.1em 1.2em;
+      border: 2px solid transparent;
+      cursor: pointer;
+      transition: border 0.2s, background 0.2s;
+      font-size: 1.05rem;
+      position: relative;
+    }
+    .fixr1252025r-bundle.fixr1252025r-active {
+      background: var(--fixr1252025r-bundle-active);
+      border: 2px solid var(--fixr1252025r-bundle-border);
+    }
+    .fixr1252025r-bundle .fixr1252025r-bundle-label {
+      font-weight: 600;
+      color: var(--fixr1252025r-text);
+    }
+    .fixr1252025r-bundle .fixr1252025r-bundle-price {
+      font-weight: 700;
+      color: var(--fixr1252025r-blue);
+      font-size: 1.1rem;
+    }
+    .fixr1252025r-bundle .fixr1252025r-bundle-old {
+      color: var(--fixr1252025r-price-old);
+      text-decoration: line-through;
+      font-size: 0.98rem;
+      margin-left: 0.7em;
+      font-weight: 400;
+    }
+    .fixr1252025r-bundle .fixr1252025r-bundle-badge {
+      position: absolute;
+      top: -1.5em;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--fixr1252025r-blue);
+      color: #fff;
+      font-size: 0.85rem;
+      padding: 0.2em 0.8em;
+      border-radius: 8px;
+      font-weight: 600;
+      box-shadow: 0 2px 8px rgba(18,147,233,0.08);
+    }
+    .fixr1252025r-btns {
+      display: flex;
+      flex-direction: column;
+      gap: 0.7rem;
+      margin-bottom: 0.7rem;
+    }
+    .fixr1252025r-btn {
+      background: var(--fixr1252025r-btn);
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      font-size: 1.1rem;
+      font-weight: 700;
+      padding: 1em 0;
+      cursor: pointer;
+      transition: background 0.2s;
+      width: 100%;
+      box-shadow: var(--fixr1252025r-shadow);
+    }
+    .fixr1252025r-btn:hover {
+      background: var(--fixr1252025r-btn-hover);
+    }
+    .fixr1252025r-btn-shop {
+      background: #3b3bff;
+      color: #fff;
+      font-weight: 700;
+      border-radius: 10px;
+      padding: 1em 0;
+      font-size: 1.1rem;
+      border: none;
+      width: 100%;
+      margin-top: 0.2em;
+      box-shadow: var(--fixr1252025r-shadow);
+    }
+    .fixr1252025r-trust {
+      color: var(--fixr1252025r-warning);
+      font-size: 1rem;
+      text-align: center;
+      margin-top: 0.7rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5em;
+    }
+    .fixr1252025r-upgrade {
+      margin-top: 2.5rem;
+    }
+    .fixr1252025r-upgrade-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: var(--fixr1252025r-text);
+    }
+    .fixr1252025r-upgrade-list {
+      display: flex;
+      gap: 1.2rem;
+      flex-wrap: wrap;
+    }
+    .fixr1252025r-upgrade-card {
+      background: var(--fixr1252025r-white);
+      border-radius: 12px;
+      box-shadow: var(--fixr1252025r-shadow);
+      padding: 1.2rem 1rem;
+      min-width: 180px;
+      flex: 1 1 180px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.7rem;
+      text-align: center;
+    }
+    .fixr1252025r-upgrade-img {
+      width: 60px;
+      height: 60px;
+      object-fit: contain;
+      margin-bottom: 0.5rem;
+    }
+    .fixr1252025r-upgrade-name {
+      font-weight: 600;
+      color: var(--fixr1252025r-text);
+      margin-bottom: 0.2rem;
+    }
+    .fixr1252025r-upgrade-price {
+      color: var(--fixr1252025r-blue);
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+    .fixr1252025r-upgrade-btn {
+      background: var(--fixr1252025r-btn);
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      padding: 0.6em 1.2em;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .fixr1252025r-upgrade-btn:hover {
+      background: var(--fixr1252025r-btn-hover);
+    }
+    @media (max-width: 1024px) {
+      .fixr1252025r-container {
+        flex-direction: column;
+        gap: 2.5rem;
+        padding: 1.2rem;
+      }
+      .fixr1252025r-right {
+        padding: 1.5rem 1rem 1.5rem 1rem;
+        min-width: unset;
+      }
+      .fixr1252025r-left {
+        align-items: center;
+      }
+    }
+    @media (max-width: 700px) {
+      .fixr1252025r-main-img {
+        max-width: 100%;
+      }
+      .fixr1252025r-upgrade-list {
+        flex-direction: column;
+        gap: 1rem;
+      }
+      .fixr1252025r-upgrade-card {
+        min-width: unset;
+      }
+    }
+    @media (max-width: 500px) {
+      .fixr1252025r-container {
+        padding: 0.5rem;
+      }
+      .fixr1252025r-right {
+        padding: 1rem 0.5rem;
+      }
+      .fixr1252025r-title {
+        font-size: 1.2rem;
+      }
+      .fixr1252025r-main-img {
+        border-radius: 10px;
+      }
+    }
+  </style>
+
+  <div class="fixr1252025r-main">
+    <div class="fixr1252025r-container">
+      <!-- Left: Product Images -->
+      <div class="fixr1252025r-left">
+        <img src="https://seekglo-ecomfixr.myshopify.com/cdn/shop/files/26_4f685358-7028-46dc-8217-2d31ce11ff4c.png?v=1745126787&width=713" alt="HydroZen Beauty Patches" class="fixr1252025r-main-img">
+        <div class="fixr1252025r-thumbs">
+          <img src="https://seekglo-ecomfixr.myshopify.com/cdn/shop/files/prod_img6.jpg?v=1745126787&width=110" class="fixr1252025r-thumb fixr1252025r-active" alt="Thumb 1">
+          <img src="https://seekglo-ecomfixr.myshopify.com/cdn/shop/files/25.png?v=1745126787&width=713" class="fixr1252025r-thumb" alt="Thumb 2">
+          <img src="https://seekglo-ecomfixr.myshopify.com/cdn/shop/files/26_4f685358-7028-46dc-8217-2d31ce11ff4c.png?v=1745126787&width=713" class="fixr1252025r-thumb" alt="Thumb 3">
+          <img src="https://seekglo-ecomfixr.myshopify.com/cdn/shop/files/25.png?v=1745126787&width=713" class="fixr1252025r-thumb" alt="Thumb 4">
+        </div>
+      </div>
+      <!-- Right: Product Info -->
+      <div class="fixr1252025r-right">
+        <div class="fixr1252025r-rating">
+          ★★★★☆ 4.8/5 ratings based on 2,485 reviews
+        </div>
+        <div class="fixr1252025r-title">
+          Hydrozen Beauty Patches+
+        </div>
+        <div class="fixr1252025r-desc">
+          Next-generation skincare through micro-infusion
+        </div>
+        <div class="fixr1252025r-price-row">
+          <span class="fixr1252025r-price-old">$208.40</span>
+          <span class="fixr1252025r-price-new">$129.26</span>
+          <span class="fixr1252025r-price-save">SAVE 38%</span>
+        </div>
+        <div class="fixr1252025r-quote">
+          "This helps to make the eyes, the focal point of the face, lively and radiant."<br>– VOGUE
+        </div>
+        <ul class="fixr1252025r-features">
+          <li>Reduces wrinkles & dark circles</li>
+          <li>Active ingredients penetrate deeply</li>
+          <li>Faster serum absorption</li>
+          <li>With Retinol & Peptides</li>
+        </ul>
+        <div class="fixr1252025r-delivery">
+          <span>🚚</span> Estimated Delivery: <b>May 15 – May 19</b>
+        </div>
+        <div class="fixr1252025r-bundles">
+          <div class="fixr1252025r-bundle">
+            <span class="fixr1252025r-bundle-label">1 month supply</span>
+            <span class="fixr1252025r-bundle-price">$69.47</span>
+            <span class="fixr1252025r-bundle-old">$100.55</span>
+          </div>
+          <div class="fixr1252025r-bundle">
+            <span class="fixr1252025r-bundle-label">2 month supply</span>
+            <span class="fixr1252025r-bundle-price">$112.55</span>
+            <span class="fixr1252025r-bundle-old">$138.93</span>
+          </div>
+          <div class="fixr1252025r-bundle fixr1252025r-active">
+            <span class="fixr1252025r-bundle-badge">Over 7,000 people chose this offer</span>
+            <span class="fixr1252025r-bundle-label">3 month supply</span>
+            <span class="fixr1252025r-bundle-price">$129.26</span>
+            <span class="fixr1252025r-bundle-old">$208.40</span>
+          </div>
+        </div>
+        <div class="fixr1252025r-btns">
+          <button class="fixr1252025r-btn">ADD TO CART • $129.26</button>
+          <button class="fixr1252025r-btn-shop">Buy with Shop Pay</button>
+        </div>
+        <div class="fixr1252025r-trust">
+          <span>🔥</span> Over 2000 customers trust us!
+        </div>
+      </div>
+    </div>
+    <!-- Upgrade Section -->
+    <div class="fixr1252025r-container fixr1252025r-upgrade">
+      <div style="width:100%">
+        <div class="fixr1252025r-upgrade-title">Upgrade your routine</div>
+        <div class="fixr1252025r-upgrade-list">
+          <div class="fixr1252025r-upgrade-card">
+            <img src="https://seekglo-ecomfixr.myshopify.com/cdn/shop/files/25.png?v=1745126787&width=713" alt="HydroZen Infuse+" class="fixr1252025r-upgrade-img">
+            <div class="fixr1252025r-upgrade-name">HydroZen Infuse+</div>
+            <div class="fixr1252025r-upgrade-price">$119.00</div>
+            <button class="fixr1252025r-upgrade-btn">Add</button>
+          </div>
+          <div class="fixr1252025r-upgrade-card">
+            <img src="https://seekglo-ecomfixr.myshopify.com/cdn/shop/files/25.png?v=1745126787&width=713" alt="All-in-one Serum" class="fixr1252025r-upgrade-img">
+            <div class="fixr1252025r-upgrade-name">All-in-one Serum</div>
+            <div class="fixr1252025r-upgrade-price">$84.00</div>
+            <button class="fixr1252025r-upgrade-btn">Add</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

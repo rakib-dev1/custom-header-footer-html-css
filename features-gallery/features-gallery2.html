@@ -1,0 +1,139 @@
+<style>
+:root {
+  --fixr1252025r-bg: #f6fcfb;
+  --fixr1252025r-card-bg: #fff;
+  --fixr1252025r-card-radius: 22px;
+  --fixr1252025r-card-shadow: 0 2px 16px rgba(0,0,0,0.07);
+  --fixr1252025r-card-gap: 2rem;
+  --fixr1252025r-card-gap-mobile: 1.2rem;
+  --fixr1252025r-title: #222;
+  --fixr1252025r-step-bg: #111827;
+  --fixr1252025r-step-color: #fff;
+  --fixr1252025r-desc: #444b5d;
+  --fixr1252025r-card-width: 320px;
+  --fixr1252025r-img-ratio: 1.2/1;
+
+}
+.fixr1252025r-features-section {
+  background: var(--fixr1252025r-bg);
+  padding: 2.5rem 0 3.5rem 0;
+  width: 100%;
+}
+.fixr1252025r-features-cards {
+  display: flex;
+  flex-direction: row;
+  gap: var(--fixr1252025r-card-gap);
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+.fixr1252025r-feature-card {
+  background: var(--fixr1252025r-card-bg);
+  border-radius: var(--fixr1252025r-card-radius);
+  box-shadow: var(--fixr1252025r-card-shadow);
+  width: var(--fixr1252025r-card-width);
+  max-width: 95vw;
+  padding: 0 1.2rem 2rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+.fixr1252025r-feature-img {
+  width: 100%;
+  aspect-ratio: var(--fixr1252025r-img-ratio);
+  border-radius: 16px 16px 0 0;
+  object-fit: cover;
+  margin-bottom: 1.1rem;
+  margin-top: 1.1rem;
+}
+.fixr1252025r-feature-step {
+  background: var(--fixr1252025r-step-bg);
+  color: var(--fixr1252025r-step-color);
+  border-radius: 20px;
+  padding: 0.3em 1.2em;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  margin-top: 0.2rem;
+  display: inline-block;
+}
+.fixr1252025r-feature-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--fixr1252025r-title);
+  margin-bottom: 0.7rem;
+  text-align: center;
+}
+.fixr1252025r-feature-desc {
+  color: var(--fixr1252025r-desc);
+  font-size: 1rem;
+  text-align: center;
+  line-height: 1.6;
+}
+@media (max-width: 1100px) {
+  .fixr1252025r-features-cards {
+    gap: var(--fixr1252025r-card-gap-mobile);
+  }
+  .fixr1252025r-feature-card {
+    width: 90vw;
+    max-width: 400px;
+  }
+}
+@media (max-width: 900px) {
+  .fixr1252025r-features-cards {
+    flex-wrap: wrap;
+    gap: var(--fixr1252025r-card-gap-mobile);
+  }
+  .fixr1252025r-feature-card {
+    width: 95vw;
+    max-width: 500px;
+  }
+}
+@media (max-width: 700px) {
+  .fixr1252025r-features-cards {
+    flex-direction: column;
+    align-items: center;
+    gap: var(--fixr1252025r-card-gap-mobile);
+  }
+  .fixr1252025r-feature-card {
+    width: 98vw;
+    max-width: 98vw;
+  }
+}
+</style>
+
+<div class="fixr1252025r-features-section">
+  <div class="fixr1252025r-features-cards">
+    <div class="fixr1252025r-feature-card">
+      <img src="https://picsum.photos/200" class="fixr1252025r-feature-img" alt="Preparing the device">
+      <div class="fixr1252025r-feature-step">Step 1</div>
+      <div class="fixr1252025r-feature-title">Preparing the device</div>
+      <div class="fixr1252025r-feature-desc">Fill the SeekGlo device with serum, invert it, and let it stand for 1–2 minutes to saturate the needles. Securely close the cap before use.</div>
+    </div>
+    <div class="fixr1252025r-feature-card">
+      <img src="https://picsum.photos/200" class="fixr1252025r-feature-img" alt="Cleanse your face">
+      <div class="fixr1252025r-feature-step">Step 2</div>
+      <div class="fixr1252025r-feature-title">Cleanse your face</div>
+      <div class="fixr1252025r-feature-desc">In the meantime, gently cleanse your face to remove makeup and impurities – this will allow your skin to optimally absorb the serum.</div>
+    </div>
+    <div class="fixr1252025r-feature-card">
+      <img src="https://picsum.photos/200" class="fixr1252025r-feature-img" alt="Start the treatment and use the remaining serum">
+      <div class="fixr1252025r-feature-step">Step 3</div>
+      <div class="fixr1252025r-feature-title">Start the treatment and use the remaining serum</div>
+      <div class="fixr1252025r-feature-desc">Start in the center of your face and work outward. Repeat 2-3 times. Gently pat any remaining serum onto your face and neck and leave on overnight.</div>
+    </div>
+    <div class="fixr1252025r-feature-card">
+      <img src="https://picsum.photos/200" class="fixr1252025r-feature-img" alt="Care after treatment & cleaning of the device">
+      <div class="fixr1252025r-feature-step">Step 4</div>
+      <div class="fixr1252025r-feature-title">Care after treatment & cleaning of the device</div>
+      <div class="fixr1252025r-feature-desc">Afterward, apply a gentle moisturizer—redness usually subsides after 15–20 minutes. Clean the device thoroughly and allow it to air dry completely.</div>
+    </div>
+    <div class="fixr1252025r-feature-card">
+      <img src="https://picsum.photos/200" class="fixr1252025r-feature-img" alt="Enjoy the results">
+      <div class="fixr1252025r-feature-step">Step 5</div>
+      <div class="fixr1252025r-feature-title">Enjoy the results</div>
+      <div class="fixr1252025r-feature-desc">Let the treatment work and enjoy radiant, smooth skin. If you have any questions, we're always here to help you get the most out of your SeekGlo treatment.</div>
+    </div>
+  </div>
+</div>
