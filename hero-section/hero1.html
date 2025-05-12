@@ -1,0 +1,155 @@
+<style>
+    :root {
+        --fixr842025r-primary-color: #3498db;
+        --fixr842025r-text-color: #333;
+        --fixr842025r-heading-color: #000;
+        --fixr842025r-spacing-sm: 10px;
+        --fixr842025r-spacing-md: 20px;
+        --fixr842025r-spacing-lg: 30px;
+        --fixr842025r-font-size-sm: 16px;
+        --fixr842025r-font-size-md: 24px;
+        --fixr842025r-font-size-lg: 48px;
+        --fixr842025r-star-color: #FFD700;
+        --fixr842025r-button-bg: #3498db;
+        --fixr842025r-button-text: #fff;
+        --fixr842025r-container-width: 1200px;
+        --fixr842025r-hero-flex-direction: row-reverse;
+    }
+
+    .fixr842025r-hero-section {
+        display: flex;
+        flex-direction: var(--fixr842025r-hero-flex-direction);
+        align-items: center;
+        gap: var(--fixr842025r-spacing-lg);
+        max-width: var(--fixr842025r-container-width);
+        margin: var(--fixr842025r-spacing-lg) auto;
+        padding: 0 var(--fixr842025r-spacing-md);
+    }
+
+    .fixr842025r-hero-image-container {
+        flex: 1;
+        padding: var(--fixr842025r-spacing-md);
+    }
+
+    .fixr842025r-hero-image {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+
+    .fixr842025r-hero-content {
+        flex: 1;
+        padding: var(--fixr842025r-spacing-md);
+    }
+
+    .fixr842025r-hero-title {
+        font-size: var(--fixr842025r-font-size-lg);
+        color: var(--fixr842025r-heading-color);
+        margin-bottom: var(--fixr842025r-spacing-md);
+        line-height: 1.2;
+    }
+
+    .fixr842025r-hero-subtitle {
+        color: var(--fixr842025r-primary-color);
+        font-size: var(--fixr842025r-font-size-md);
+        margin-bottom: var(--fixr842025r-spacing-sm);
+    }
+
+    .fixr842025r-hero-description {
+        color: var(--fixr842025r-text-color);
+        font-size: var(--fixr842025r-font-size-sm);
+        line-height: 1.6;
+        margin-bottom: var(--fixr842025r-spacing-md);
+    }
+
+    .fixr842025r-hero-button {
+        background-color: var(--fixr842025r-button-bg);
+        color: var(--fixr842025r-button-text);
+        padding: var(--fixr842025r-spacing-sm) var(--fixr842025r-spacing-lg);
+        border: none;
+        border-radius: 30px;
+        font-size: var(--fixr842025r-font-size-sm);
+        cursor: pointer;
+        transition: opacity 0.3s ease;
+        text-transform: uppercase;
+        font-weight: bold;
+        margin-bottom: var(--fixr842025r-spacing-md);
+    }
+
+    .fixr842025r-hero-button:hover {
+        opacity: 0.9;
+    }
+
+    .fixr842025r-rating-container {
+        display: flex;
+        align-items: center;
+        gap: var(--fixr842025r-spacing-sm);
+    }
+
+    .fixr842025r-rating {
+        display: flex;
+        gap: 2px;
+    }
+
+    .fixr842025r-star {
+        color: var(--fixr842025r-star-color);
+        font-size: var(--fixr842025r-font-size-md);
+    }
+
+    .fixr842025r-rating-text {
+        color: var(--fixr842025r-text-color);
+        font-size: var(--fixr842025r-font-size-sm);
+    }
+
+    @media screen and (max-width: 992px) {
+        .fixr842025r-hero-section {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .fixr842025r-hero-image-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .fixr842025r-rating-container {
+            justify-content: center;
+        }
+
+        .fixr842025r-hero-title {
+            font-size: calc(var(--fixr842025r-font-size-lg) * 0.8);
+        }
+    }
+
+    @media screen and (max-width: 576px) {
+        .fixr842025r-hero-title {
+            font-size: calc(var(--fixr842025r-font-size-lg) * 0.6);
+        }
+
+        .fixr842025r-hero-subtitle {
+            font-size: calc(var(--fixr842025r-font-size-md) * 0.9);
+        }
+    }
+</style>
+
+<div class="fixr842025r-hero-section">
+    <div class="fixr842025r-hero-image-container">
+        <img src="https://seekglo-ecomfixr.myshopify.com/cdn/shop/files/SeekGlo_c3421b47-7c6d-48e3-a390-402b0cd5b4c9.png?v=1744873644&width=720" alt="Skin Rejuvenation Device" class="fixr842025r-hero-image">
+    </div>
+    <div class="fixr842025r-hero-content">
+        <h2 class="fixr842025r-hero-subtitle">The most effective</h2>
+        <h1 class="fixr842025r-hero-title">Skin rejuvenation system you've ever seen!</h1>
+        <p class="fixr842025r-hero-description">Experience the most advanced microchannel technology for radiant and healthy skin - from the comfort of your home. Increase serum absorption by up to 300%.</p>
+        <button class="fixr842025r-hero-button">EXPERIENCE IT TODAY</button>
+        <div class="fixr842025r-rating-container">
+            <div class="fixr842025r-rating">
+                <span class="fixr842025r-star">★</span>
+                <span class="fixr842025r-star">★</span>
+                <span class="fixr842025r-star">★</span>
+                <span class="fixr842025r-star">★</span>
+                <span class="fixr842025r-star">★</span>
+            </div>
+            <p class="fixr842025r-rating-text">Excellent (2,500+ reviews)</p>
+        </div>
+    </div>
+</div>

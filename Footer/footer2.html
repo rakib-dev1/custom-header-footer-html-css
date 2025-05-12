@@ -1,0 +1,161 @@
+
+    <style>
+        :root {
+            --fixr842025r-primary-color: #3498db;
+            --fixr842025r-bg-color: #000;
+            --fixr842025r-text-color: #fff;
+            --fixr842025r-border-color: #333;
+            --fixr842025r-spacing-sm: 10px;
+            --fixr842025r-spacing-md: 20px;
+            --fixr842025r-spacing-lg: 30px;
+            --fixr842025r-spacing-xl: 40px;
+            --fixr842025r-font-size-sm: 14px;
+            --fixr842025r-font-size-md: 16px;
+            --fixr842025r-font-size-lg: 18px;
+            --fixr842025r-footer-icon-align:center;
+        }
+
+        .fixr842025r-footer {
+            background-color: var(--fixr842025r-bg-color);
+            color: var(--fixr842025r-text-color);
+            padding: var(--fixr842025r-spacing-xl) var(--fixr842025r-spacing-md);
+            font-family: Arial, sans-serif;
+        }
+
+        .fixr842025r-footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: var(--fixr842025r-spacing-lg);
+        }
+
+        .fixr842025r-footer-section h3 {
+            color: var(--fixr842025r-primary-color);
+            margin-bottom: var(--fixr842025r-spacing-md);
+            font-size: var(--fixr842025r-font-size-lg);
+        }
+
+        .fixr842025r-footer-section p {
+            color: var(--fixr842025r-text-color);
+            line-height: 1.6;
+            margin-bottom: var(--fixr842025r-spacing-sm);
+            font-size: var(--fixr842025r-font-size-sm);
+        }
+
+        .fixr842025r-footer-section ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .fixr842025r-footer-section ul li {
+            margin-bottom: var(--fixr842025r-spacing-sm);
+        }
+
+        .fixr842025r-footer-section ul li a {
+            color: var(--fixr842025r-text-color);
+            text-decoration: none;
+            font-size: var(--fixr842025r-font-size-sm);
+            transition: color 0.3s ease;
+        }
+
+        .fixr842025r-footer-section ul li a:hover {
+            color: var(--fixr842025r-primary-color);
+        }
+
+        .fixr842025r-contact-info {
+            margin-top: var(--fixr842025r-spacing-md);
+        }
+
+        .fixr842025r-contact-info p {
+            display: flex;
+            align-items: center;
+            gap: var(--fixr842025r-spacing-sm);
+            margin-bottom: var(--fixr842025r-spacing-sm);
+        }
+
+        .fixr842025r-payment-methods {
+            text-align: var(--fixr842025r-footer-icon-align);
+            margin-top: var(--fixr842025r-spacing-lg);
+            padding-top: var(--fixr842025r-spacing-md);
+            border-top: 1px solid var(--fixr842025r-border-color);
+        }
+
+        .fixr842025r-payment-methods img {
+            height: 30px;
+            margin-left: var(--fixr842025r-spacing-sm);
+        }
+
+        @media screen and (max-width: 992px) {
+            .fixr842025r-footer-container {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+
+        @media screen and (max-width: 576px) {
+            
+            
+            .fixr842025r-payment-methods {
+                text-align: center;
+            }
+            
+            .fixr842025r-payment-methods img {
+                margin: var(--fixr842025r-spacing-sm);
+            }
+        }
+    </style>
+    <footer class="fixr842025r-footer">
+        <div class="fixr842025r-footer-container">
+            
+            <div class="fixr842025r-footer-section">
+                
+                <h3>Seekglo</h3>
+                <p>At Hydrazen, we help you achieve radiant and healthy skin from the comfort of your home. Our Skin Rejuvenation Micro-Infuser uses advanced microchannel technology to increase serum absorption by up to 300%.</p>
+            </div>
+
+            <div class="fixr842025r-footer-section">
+                <h3>Navigation</h3>
+                <ul>
+                    <li><a href="#">Buy Infuser</a></li>
+                    <li><a href="#">Buy Beauty Patches</a></li>
+                    <li><a href="#">Buy Mask</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+
+            <div class="fixr842025r-footer-section">
+                <h3>Information</h3>
+                <ul>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Refund Policy</a></li>
+                    <li><a href="#">Shipping Policy</a></li>
+                </ul>
+            </div>
+
+            <div class="fixr842025r-footer-section">
+                <h3>Contact</h3>
+                <div class="fixr842025r-contact-info">
+                    <p>📍 Dr Willem dreeslaan 9 3705KT Zeist</p>
+                    <p>✉️ support@hydrazen.com</p>
+                    <p>📞 0031685115049</p>
+                    <p>⏰ Monday - Friday: 09:00 - 17:00 CST</p>
+                </div>
+                <p>We strive to answer all your questions within 24 hours.</p>
+            </div>
+        </div>
+      
+        <div class="fixr842025r-payment-methods">
+                <p class="fixr842025r-footer-copyright">© Seekglo 2025 | powered by eComfixR</p>
+                <img src="https://img.icons8.com/fluency/50/amex.png" alt="American Express">
+                <img src="https://img.icons8.com/color/50/google-pay-india.png" alt="Google Pay">
+                <img src="https://img.icons8.com/color/50/mastercard.png" alt="Mastercard">
+                <img src="https://img.icons8.com/fluency/50/visa.png" alt="Visa">
+                <img src="https://img.icons8.com/fluency/50/paypal.png" alt="PayPal">
+               
+      
+      </div>
+    </footer>
+

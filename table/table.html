@@ -1,0 +1,270 @@
+<style>
+  :root {
+    --fixr842025r-table-primary: #1a202c;
+    --fixr842025r-table-secondary: #d5f1ff;
+    --fixr842025r-table-accent: #ebf8ff;
+    --fixr842025r-table-success: #48bb78;
+    --fixr842025r-table-error: #f56565;
+    --fixr842025r-table-text: #000000;
+    --fixr842025r-table-border: #edf2f7;
+    --fixr842025r-table-spacing: 1rem;
+    --fixr842025r-table-radius: 8px;
+    --fixr842025r-table-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .fixr842025r-table-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: calc(var(--fixr842025r-table-spacing) * 2);
+  }
+
+  .fixr842025r-table-title {
+    text-align: center;
+    color: var(--fixr842025r-table-primary);
+    margin-bottom: var(--fixr842025r-table-spacing);
+  }
+
+  .fixr842025r-table-subtitle {
+    text-align: center;
+    color: var(--fixr842025r-table-text);
+    margin-bottom: calc(var(--fixr842025r-table-spacing) * 2);
+  }
+
+  .fixr842025r-table-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 300px 300px;
+    margin-bottom: calc(var(--fixr842025r-table-spacing) * 2);
+  }
+
+  .fixr842025r-table-row {
+    display: contents;
+  }
+
+
+  .fixr842025r-table-header {
+    text-align: center;
+    padding: var(--fixr842025r-table-spacing);
+  }
+
+  .fixr842025r-table-header-image {
+    width: 120px;
+    height: auto;
+    margin: 0 auto var(--fixr842025r-table-spacing);
+    display: block;
+  }
+
+  .fixr842025r-table-header-title {
+    font-size: 1.5rem;
+    color: var(--fixr842025r-table-primary);
+    margin: 0;
+  }
+.fixr842025r-table-header:nth-child(2){
+    background-color: var(--fixr842025r-table-secondary);
+    border-top-left-radius: var(--fixr842025r-table-radius);
+    border-top-right-radius: var(--fixr842025r-table-radius);
+}
+  .fixr842025r-table-cell:nth-child(2) {
+    background-color: var(--fixr842025r-table-secondary);
+  }
+  .fixr842025r-table-cell {
+    padding: var(--fixr842025r-table-spacing);
+    border-top: 1px solid var(--fixr842025r-table-border);
+    display: flex;
+    align-items: center;
+  }
+  .fixr842025r-table-row:nth-child(even) .fixr842025r-table-cell {
+    background-color: var(--fixr842025r-table-secondary);
+     
+  }
+
+  .fixr842025r-table-feature {
+    font-weight: 500;
+    color: var(--fixr842025r-table-text);
+  }
+
+
+  .fixr842025r-table-check,
+  .fixr842025r-table-cross {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .fixr842025r-table-check {
+    background: var(--fixr842025r-table-success);
+    color: white;
+  }
+
+  .fixr842025r-table-cross {
+    background: var(--fixr842025r-table-error);
+    color: white;
+  }
+
+  .fixr842025r-table-cta {
+    display: inline-block;
+    background: var(--fixr842025r-table-primary);
+    color: white;
+    text-decoration: none;
+    padding: calc(var(--fixr842025r-table-spacing) * 0.75) calc(var(--fixr842025r-table-spacing) * 1.5);
+    border-radius: var(--fixr842025r-table-radius);
+    font-weight: 600;
+    text-align: center;
+    margin: 0 auto;
+    transition: transform 0.2s;
+  }
+
+  .fixr842025r-table-cta:hover {
+    transform: translateY(-2px);
+  }
+
+  @media (max-width: 768px) {
+    .fixr842025r-table-wrapper {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .fixr842025r-table-row {
+      display: flex;
+      align-items: center;
+    }
+
+    .fixr842025r-table-header {
+      display: none;
+    }
+
+    .fixr842025r-table-cell {
+      flex: 1;
+      border: none;
+      padding: 0.75rem;
+    }
+
+    .fixr842025r-table-feature {
+      flex: 1;
+      text-align: left;
+      padding-left: 0;
+    }
+
+    .fixr842025r-table-cell:nth-child(2) {
+      background-color: var(--fixr842025r-table-secondary);
+      width: 40px;
+      display: flex;
+      justify-content: center;
+      padding-right: 0.75rem;
+    }
+
+    .fixr842025r-table-cell:last-child {
+      width: 40px;
+      display: flex;
+      justify-content: center;
+      padding-right: 0;
+    }
+
+    .fixr842025r-table-check,
+    .fixr842025r-table-cross {
+      width: 20px;
+      height: 20px;
+      margin: 0;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .fixr842025r-table-container {
+      padding: 1rem;
+    }
+
+    .fixr842025r-table-title {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .fixr842025r-table-subtitle {
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .fixr842025r-table-feature {
+      font-size: 0.9rem;
+    }
+
+    .fixr842025r-table-row {
+      margin-bottom: 0.5rem;
+    }
+  }
+</style>
+
+<div class="fixr842025r-table-container">
+  <h3 class="fixr842025r-table-subtitle">HydroZen vs. other solutions</h3>
+  <h2 class="fixr842025r-table-title">What makes HydroZen special?</h2>
+  
+  <div class="fixr842025r-table-wrapper">
+    <div class="fixr842025r-table-row">
+      <div class="fixr842025r-table-header"></div>
+      <div class="fixr842025r-table-header">
+        <img src="https://cdn.shopify.com/s/files/1/0747/1798/7033/files/HydroZen.png?v=1744779909" alt="HydroZen Product" class="fixr842025r-table-header-image">
+        <h3 class="fixr842025r-table-header-title">HydroZen</h3>
+      </div>
+      <div class="fixr842025r-table-header">
+        <img src="https://cdn.shopify.com/s/files/1/0747/1798/7033/files/other_brands_6c8a42ce-2d1f-45ec-9a6f-5056c1ccaaa5.png?v=1744878509" alt="Other Brands" class="fixr842025r-table-header-image">
+        <h3 class="fixr842025r-table-header-title">Other Brands</h3>
+      </div>
+    </div>
+
+    <div class="fixr842025r-table-row">
+      <div class="fixr842025r-table-cell fixr842025r-table-feature">Natural & Painless</div>
+      <div class="fixr842025r-table-cell">
+        <div class="fixr842025r-table-check">✓</div>
+      </div>
+      <div class="fixr842025r-table-cell">
+        <div class="fixr842025r-table-cross">✕</div>
+      </div>
+    </div>
+
+    <div class="fixr842025r-table-row">
+      <div class="fixr842025r-table-cell fixr842025r-table-feature">Removes Toxins From Skin</div>
+      <div class="fixr842025r-table-cell">
+        <div class="fixr842025r-table-check">✓</div>
+      </div>
+      <div class="fixr842025r-table-cell">
+        <div class="fixr842025r-table-check">✓</div>
+      </div>
+    </div>
+
+    <div class="fixr842025r-table-row">
+      <div class="fixr842025r-table-cell fixr842025r-table-feature">Clinic Visit Is Not Required</div>
+      <div class="fixr842025r-table-cell">
+        <div class="fixr842025r-table-check">✓</div>
+      </div>
+      <div class="fixr842025r-table-cell">
+        <div class="fixr842025r-table-cross">✕</div>
+      </div>
+    </div>
+
+    <div class="fixr842025r-table-row">
+      <div class="fixr842025r-table-cell fixr842025r-table-feature">Cruelty Free</div>
+      <div class="fixr842025r-table-cell">
+        <div class="fixr842025r-table-check">✓</div>
+      </div>
+      <div class="fixr842025r-table-cell">
+        <div class="fixr842025r-table-cross">✕</div>
+      </div>
+    </div>
+
+    <div class="fixr842025r-table-row">
+      <div class="fixr842025r-table-cell fixr842025r-table-feature">Wallet Friendly</div>
+      <div class="fixr842025r-table-cell">
+        <div class="fixr842025r-table-check">✓</div>
+      </div>
+      <div class="fixr842025r-table-cell">
+        <div class="fixr842025r-table-cross">✕</div>
+      </div>
+    </div>
+  </div>
+
+  <div style="text-align: center;">
+    <a href="#" class="fixr842025r-table-cta">Shop with confidence</a>
+  </div>
+</div>

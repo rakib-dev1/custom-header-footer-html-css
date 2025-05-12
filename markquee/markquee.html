@@ -1,0 +1,110 @@
+<style>
+    :root {
+        --fixr842025r-marquee-bg: #EBF5FF;
+        --fixr842025r-marquee-speed: 35s;
+        --fixr842025r-marquee-gap: 40px;
+        --fixr842025r-marquee-item-width: 200px;
+        --fixr842025r-marquee-height: 100px;
+        --fixr842025r-marquee-padding: 20px;
+        --fixr842025r-marquee-direction: -1; 
+        --fixr842025r-marquee-items-shown: 3;
+        --fixr842025r-marquee-duration: 35s; 
+        --fixr842025r-marquee-timing: linear;
+        --fixr842025r-marquee-hover: paused; 
+        --fixr842025r-marquee-item-filter: grayscale(1);
+    }
+
+    .fixr842025r-marquee-container {
+        background: var(--fixr842025r-marquee-bg);
+        overflow: hidden;
+        position: relative;
+        padding: var(--fixr842025r-marquee-padding) 0;
+        width: 100%;
+    }
+    .fixr842025r-marquee-content {
+        display: flex;
+        gap: var(--fixr842025r-marquee-gap);
+        animation: fixr842025r-scroll var(--fixr842025r-marquee-duration) var(--fixr842025r-marquee-timing) infinite;
+    }
+    .fixr842025r-marquee-content:hover {
+        animation-play-state: var(--fixr842025r-marquee-hover);
+    }
+    .fixr842025r-marquee-item {
+        flex: 0 0 var(--fixr842025r-marquee-item-width);
+        height: var(--fixr842025r-marquee-height);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .fixr842025r-marquee-item img {
+        max-width: 100%;
+        height: auto;
+        object-fit: contain;
+        filter: var(--fixr842025r-marquee-item-filter);
+        opacity: 0.8;
+        transition: all 0.3s ease;
+    }
+
+    .fixr842025r-marquee-item img:hover {
+        filter: grayscale(0);
+        opacity: 1;
+    }
+
+    @keyframes fixr842025r-scroll {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(calc(var(--fixr842025r-marquee-direction) * (var(--fixr842025r-marquee-item-width) + var(--fixr842025r-marquee-gap)) * var(--fixr842025r-marquee-items-shown)));
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        :root {
+            --fixr842025r-marquee-item-width: 150px;
+            --fixr842025r-marquee-height: 80px;
+            --fixr842025r-marquee-gap: 20px;
+            --fixr842025r-marquee-padding: 15px;
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        :root {
+            --fixr842025r-marquee-item-width: 120px;
+            --fixr842025r-marquee-height: 60px;
+            --fixr842025r-marquee-gap: 15px;
+            --fixr842025r-marquee-padding: 10px;
+        }
+    }
+</style>
+
+<div class="fixr842025r-marquee-container">
+    <div class="fixr842025r-marquee-content">
+        <div class="fixr842025r-marquee-item">
+            <img src="https://seekglo-ecomfixr.myshopify.com/cdn/shop/files/pngfindcomvoguelogopng2795444-1677835109650.png?v=1744876867&width=360"  alt="" >
+        </div>
+        <div class="fixr842025r-marquee-item">
+            <img src="https://seekglo-ecomfixr.myshopify.com/cdn/shop/files/vanity-1677835109651.png?v=1744876868&width=360"  alt="">
+        </div>
+
+        <div class="fixr842025r-marquee-item">
+            <img src="https://seekglo-ecomfixr.myshopify.com/cdn/shop/files/vanity-1677835109651.png?v=1744876868&width=360"  alt="">
+        </div>
+        <div class="fixr842025r-marquee-item">
+            <img src="https://seekglo-ecomfixr.myshopify.com/cdn/shop/files/vanity-1677835109651.png?v=1744876868&width=360"  alt="">
+        </div>
+        <div class="fixr842025r-marquee-item">
+            <img src="https://seekglo-ecomfixr.myshopify.com/cdn/shop/files/vanity-1677835109651.png?v=1744876868&width=360" alt="" >
+        </div>
+       
+        <div class="fixr842025r-marquee-item">
+            <img src="https://seekglo-ecomfixr.myshopify.com/cdn/shop/files/vanity-1677835109651.png?v=1744876868&width=360"  alt="">
+        </div>
+        <div class="fixr842025r-marquee-item">
+            <img src="https://seekglo-ecomfixr.myshopify.com/cdn/shop/files/vanity-1677835109651.png?v=1744876868&width=360"  alt="">
+        </div>
+        <div class="fixr842025r-marquee-item">
+            <img src="https://seekglo-ecomfixr.myshopify.com/cdn/shop/files/vanity-1677835109651.png?v=1744876868&width=360"  alt="">
+        </div>
+    </div>
+</div>
